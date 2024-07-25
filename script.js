@@ -76,7 +76,7 @@ if(playing){
     document.querySelector(`#score--${activePlayer}`).textContent=scores[activePlayer];
 
     //Check for winner 
-    if(scores[activePlayer]>=20){
+    if(scores[activePlayer]>=50){
         //finish game
         document.querySelector(`.player--${activePlayer}`).classList.add("player--winner");
         document.querySelector(`.player--${activePlayer}`).classList.remove("player--active");
