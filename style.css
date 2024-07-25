@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 60%;
+    box-sizing: border-box;
+}
+body{
+   
+    font-family:"Press Start 2P";
+    font-weight:400;
+    height: 100vh;
+    color:#f72e9d;
+    background-image: linear-gradient(to top left, #A0f4bc 0%, #fff28F 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    position: relative;
+    width: 100rem;
+    height: 60rem;
+    background-color: rgba(255,255,255,0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 3rem 5 rem rgba(0,0,0,0.25);
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+}
+.player {
+    flex:50%;
+    padding: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+}
+.name{
+position: relative;
+font-size: 4rem;
+letter-spacing: 1px;
+word-spacing: 4px;
+font-weight: 300;
+margin-bottom: 1rem;
+text-align: center;
+line-height: 1.5;
+font-weight: lighter;
+
+
+}
+
+.score{
+    font-size: 8rem;
+    font-weight: 300;
+    background-color: #06dcd4;
+    color: #fff28F;
+    margin-bottom: auto;
+    border-radius: 5px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+   
+}
+
+.current{
+    background-color:#f72e9d ;
+    color: #fff28F;
+    opacity: 0.8;
+    border-radius: 9px;
+    width: 65%;
+    padding: auto;
+    text-align: center;
+    transition: all 0.75s;
+    line-height: 2;
+    font-size: 2.5rem;
+    
+}
+
+.dice{
+    position: absolute;
+    left:50%;
+    top: 16.5rem;
+    transform: translateX(-50%);
+    height: 15rem;
+    }
+
+.btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #06dcd4;
+    background-color: rgba(255,242,143,0.7);
+    border: none;
+    font-family: inherit;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    backdrop-filter: blur(10px);
+    padding: 0.7rem 2.5rem;
+    border-radius:50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(247, 46, 157,0.5);
+}
+
+
+.btn--new{
+    top: 4rem;
+}
+.btn--roll{
+    top:39.3rem;
+}
+.btn--hold{
+    top:46.1rem;
+}
+/*ACTIVE STYLE*/
+
+.player--active{
+    background-color: #ffa2d5;
+}
+.player--active .name{
+    font-weight: bolder;
+}
+.player--active .score{
+    font-weight: bolder;
+}
+.player--active .current{
+    font-weight: bolder;
+}
+.btn:active{
+    transform: translate(-50%,3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.9);
+    font-weight: bold;
+}
+
+
+/*WINNER STYLE*/
+
+.player--winner{ 
+    background-color:rgba(0,0,0,0.8);;
+}
+.player--winner .name{
+    font-weight: bolder;
+    color:rgba(247, 46, 157);
+
+}
+.player--winner .score{
+    font-weight: bolder;
+}
+.player--winner .current{
+    font-weight: bolder;
+}
+.hidden{
+    display: none;
+}
